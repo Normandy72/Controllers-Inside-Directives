@@ -52,3 +52,11 @@ function MyDirective(){
     return ddo;
 }
 ```
+***
+##### _Summary_
+* To add functionality to the directive, one choice is to use a controller that's declared directly on the DDO.
+* Use controller property to declare controller in DDO.
+* Use bindToController and controllerAs props to bind declared properties in isolate scope directly to controller instance.
+* Define controller function as usual.
+* Whenever possible, use '<' for one-way binding to save resources instead of bidirectional binding with '='.
+***

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListDirectiveApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Directives with their own controllers</title>
+</head>
+<body>
+    <h1>Directives with their own controllers</h1>
+
+    <!-- List 1 - unlimited items -->
+    <div ng-controller="ShoppingListController as list">
+        <input type="text" ng-model="list.itemName" placeholder="item name">
+        <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+        <button ng-click="list.addItem()">Add item</button>
+
+        <shopping-list items="list.items" title="{{list.title}}"></shopping-list>
+    </div>
+</body>
+</html>
